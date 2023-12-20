@@ -1,0 +1,310 @@
+:root {
+    background-color: #193101;
+}
+body {
+    background: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+/*navbar*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    font-size: 2em;
+    grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: 50px;
+}
+
+.navigation a {
+    font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+    background-color: rgba(255, 167, 35, 0);
+    box-shadow: #ff2020;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin: 0px 10px;
+    font-weight: 600;
+    align-items: center;
+}
+.navigation a:hover {
+    font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+    background: rgb(255, 167, 35);
+    color: rgb(16, 15, 15);
+}
+/*header parallax*/
+#bckg {
+    width: 100%;
+}
+#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    margin-right: 300px;
+}
+.kalimantan img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25%;
+    pointer-events: none;
+    margin-left: 10px;
+}
+.klimntn img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 20%;
+    pointer-events: none;
+    justify-content: center;
+}
+
+/*daerah kalimantan*/
+.textdaerah {
+    margin-top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.container1 {
+    font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+    display: block;
+    align-items: center;
+    background-color: #193101;
+}
+section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+section img:hover {
+    transform: scale(1.1); 
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+.col h1, p {
+    font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+    text-align: left;
+    margin-top: 100px;
+    margin-right: 100px;
+    margin-left: 100px;
+    color: white;
+    padding: 6px;
+}
+.col p {
+    font-size: 115%;
+}
+.col img {
+    width: 300px;
+    margin-right: 200px;
+    margin-top: 50px;
+}
+
+/* Responsive CSS menggunakan Media Queries */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 20px;
+        font-size: 1.5em;
+        grid-template-columns: 30px 1fr 30px;
+    }
+
+    .navigation a {
+        padding: 6px 10px;
+        margin: 0px 5px;
+    }
+
+    .textdaerah {
+        margin-top: 30%;
+    }
+
+    .col h1, p {
+        margin-top: 50px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .col img {
+        width: 100%;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+}
+
+/*scroll custom*/
+::-webkit-scrollbar {
+    width: calc(0.25vw + 1rem);
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #3d3d3d;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(#92e93b 30%, rgb(145, 238, 83) 30%, rgb(205, 255, 172));
+  }
+
+  /*gallery kalimantan*/
+  .textgallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: red;
+}
+.slider {
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    background-color: #193101;
+  }
+.slide-track {
+    display: flex;
+    width: calc(250px * 35);
+    animation: scroll 40s linear infinite;
+}
+.slide-track:hover {
+    animation-play-state: paused;
+}
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 9));
+    }
+}
+.slide {
+    height: 200px;
+    width: 250px;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    padding: 15px;
+    perspective: 20px;
+    overflow: hidden;
+    position: relative;
+}
+img {
+    transition: transform 1s;
+    width: auto;
+    height: auto;
+}
+.img:hover {
+    transform: translateZ(20px);
+}
+
+.slider::before, .slider::after{
+    content: '';
+    height: 100%;
+    position: absolute;
+    width: 15%;
+    z-index: 2;
+}
+.slider::before{
+    left: 0;
+    top: 0;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+/*text di gallery*/
+.slide p {
+    opacity: 0;
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-family: var(--scd-font);
+    height: 55%;
+    width: 50%;
+    z-index: 10;
+    font-size: 15px;
+    transition: 250ms ease;
+    line-height: 1.0;
+    color: white;
+}
+.slide:hover {
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
+}
+.slide p:hover {
+    opacity: 1;
+}
+.slide:active {
+    -webkit-filter: brightness(0.75);
+    filter: brightness(0.75);
+}
+.slide p:active {
+    text-align: center;
+    opacity: 1;
+}
+
+/*footer*/
+footer {
+    background-color: #224400;
+    color: #fff;
+    padding: 20px;
+    height: 45%;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.team-member {
+    margin: 10px;
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.team-member p {
+    margin-top: 10px;
+    text-align: center;
+}
+.footer-bottom p {
+    margin-right: 100%;
+    padding: 15;
+    height: 15%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #193101;
+    
+}

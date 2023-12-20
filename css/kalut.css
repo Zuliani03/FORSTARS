@@ -1,0 +1,288 @@
+/*scroll custom*/
+::-webkit-scrollbar {
+  width: calc(0.25vw + 1rem);
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#754045 40%, #704045 30%, #7d6668);
+}
+body {
+  font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+  background-color: #692027;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
+/*navbar*/
+
+  nav {
+    background-color: #692027;
+    box-shadow: 0 3px 10px rgba(253, 129, 13, 0.5);
+    position: sticky;
+    top: 0;
+    transition: background-color 250ms linear;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  nav a {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 25px;
+    border-radius: 50px;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    background-color: #692027;
+    color: rgb(0, 0, 0);
+  }
+
+  /*header parallax*/
+  #bckg {
+    width: 100%;
+}
+#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    margin-right: 300px;
+}
+.kalimantan img {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    pointer-events: none;
+    margin-top: 2%;
+    margin-right: 100%;
+}
+.klimntn img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 30%;
+    pointer-events: none;
+    justify-content: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #692027;
+  margin-top: 10%;
+}
+/*suku dan bahasa*/
+
+.container1 {
+  margin-top: 47%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #692027;
+  padding: 20px;
+}
+section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+section img:hover {
+    transform: scale(1.1); 
+}
+  
+  .text {
+    font-size: 20px;
+    flex: 1;
+    padding: 20px;
+    justify-content: left;
+    text-align: left;
+    color: white;
+  }
+  
+  .image {
+    flex: 1;
+    width: 10%;
+    height: 10%;
+    margin-right: 3px;
+    margin-left: 6px;
+  }   
+
+  /*makanan khas*/
+  .textmakanan{
+    color: white;
+  }
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #692027;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.container2 img {
+ 
+    margin-left: 20px; 
+}
+
+.card {
+    border:  #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(176, 111, 6, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+  /*tarian daerah*/
+  .container3 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #692027;
+    margin-top: 5%;
+  }
+  
+  .cards-container {  
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+  }
+  
+  .card img {
+    margin-top: 10px;
+    margin-left: 5px;
+    border-bottom: solid #ccc;
+  }
+  
+  .card-info {
+    padding: 16px;
+    color: white;
+  }
+  
+  h3 {
+    margin-top: 0;
+    color: white;
+  }
+  
+  /*rumah tradisional*/
+.container4 {
+  display: flex;
+    align-items: center;
+    background-color:#692027;
+    margin-top: 5%;
+}
+/*pakaian adat*/
+.container5 {
+  margin-top: 5%;
+    background-color: #692027;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.pakaian .cards-container,
+.rumah .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 45%;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+/**all cards dan all text konten**/
+.card img {
+  width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.container3 h1,
+.container4 h1 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.card-info h3 {
+    color: #ffffff;
+}
+
+.card-info p {
+    color: #ffffff;
+}
+
+/**footer**/
+footer {
+  background-color: #802831;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member {
+  margin: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member p {
+  margin-top: 10px;
+  text-align: center;
+}
+.footer-bottom p {
+  margin-right: 100%;
+    padding: 15;
+    height: 15%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #692027;
+}

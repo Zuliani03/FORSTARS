@@ -1,0 +1,281 @@
+/*scroll custom*/
+::-webkit-scrollbar {
+  width: calc(0.25vw + 1rem);
+}
+
+::-webkit-scrollbar-track {
+  background: #3d3d3d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#5bd2f0 40%, #5dcce8 30%, #c4f3ff);
+}
+body {
+  font-family: "https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap";
+  background-color: #9cc2c5;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+/*navbar*/
+
+  nav {
+    background-color: #9cc2c5;
+    box-shadow: 0 3px 10px rgba(253, 129, 13, 0.5);
+    position: sticky;
+    top: 0;
+    transition: background-color 250ms linear;
+    width: 100%;
+    z-index: 999;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  nav a {
+    color: #000000;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0 25px;
+    border-radius: 50px;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+    background-color: #9cc2c5;
+    color: rgb(255, 255, 255);
+  }
+
+  /*header parallax*/
+  
+  #bckg {
+    width: 100%;
+}
+#text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vh;
+    margin-right: 300px;
+}
+.kalimantan img {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    pointer-events: none;
+    margin-top: 0%;
+    margin-right: 100%;
+}
+.klimntn img {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 30%;
+    pointer-events: none;
+    justify-content: center;
+}
+
+/*suku dan bahasa*/
+
+.container {
+  display: flex;
+  align-items: center;
+  background-color: #9cc2c5;
+  margin-top: 50%;
+  font-size: 20px;
+}
+/*makanan daerah*/
+.container1 {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #9cc2c5;
+  padding: 20px;
+}
+section img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+section img:hover {
+    transform: scale(1.1); 
+}
+
+  .text {
+    flex: 1;
+    padding: 20px;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+  }
+  
+  .image {
+    flex: 1;
+    width: 10%;
+    height: 10%;
+  }
+
+  /*tarian daerah*/
+  .textmakanan{
+    color: rgb(0, 0, 0);
+  }
+  .container2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #9cc2c5;
+    padding: 20px;
+    margin-top: 5%;
+}
+
+.container2 img {
+ 
+    margin-left: 20px; 
+}
+
+.card {
+    border:  #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 4px rgba(176, 111, 6, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+  /*rumah tradisional*/
+  .container3 {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    background-color: #9cc2c5;
+    margin-top: 5%;
+  }
+  
+  .cards-container {  
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap;
+  }
+  
+  .card img {
+    margin-top: 10px;
+    margin-left: 5px;
+    border-bottom: solid #ccc;
+  }
+  
+  .card-info {
+    padding: 16px;
+    color: rgb(0, 0, 0);
+  }
+  
+  h3 {
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+  }
+  
+  /*pakaian adat*/
+.container4 {
+  display: flex;
+    align-items: center;
+    background-color:#9cc2c5;
+    margin-top: 5%;
+}
+
+.pakaian .cards-container,
+.rumah .cards-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 45%;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+/**all cards dan all text konten**/
+.card img {
+  width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.container3 h1,
+.container4 h1 {
+    text-align: center;
+    color: #000000;
+}
+
+.card-info h3 {
+    color: #000000;
+}
+
+.card-info p {
+    color: #000000;
+}
+
+/**footer**/
+footer {
+  background-color: #aad3d6;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.team-member {
+  margin: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.team-member p {
+  margin-top: 10px;
+  text-align: center;
+}
+.footer-bottom p {
+  margin-right: 100%;
+    padding: 15;
+    height: 15%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #9cc2c5;
+}
